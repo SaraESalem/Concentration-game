@@ -14,11 +14,6 @@ struct Concentration {
     
    private var indexOfOneAndOnlyFaceupCard : Int? {
         get{
-//            let x = "h".oneAndOnly ; print (x) // h
-            //if filter return true it make an array and put this elemnt inside it
-//            var xe = cards.indices.filter{  cards[$0].isFaceUp } // [2,3,4,..] array of indexs // $0 index of array //loop on array
-//            var t = xe.oneAndOnly
-//            return t
             return cards.indices.filter{ cards[$0].isFaceUp }.oneAndOnly // 'hello'.oneAndOnly //nil more than one character //[cards].oneAndOnly
         }
         set{
@@ -60,8 +55,6 @@ struct Concentration {
     init(numberOfPairsOfCards:Int) {
         
         assert(numberOfPairsOfCards > 0, " this \(numberOfPairsOfCards) u must have at least one pairs of cards")
-//        print ("numberOfPairsOfCards: \(numberOfPairsOfCards)")
-        //according to buttons count on the view
         for _ in 1...numberOfPairsOfCards { // = 0..<numberOfPairsOfCards
             let card = Card()
             //card is struct value type so it is copied here twice

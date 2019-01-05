@@ -14,6 +14,7 @@
 		04E1AC362120029A006F89A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E1AC342120029A006F89A9 /* LaunchScreen.storyboard */; };
 		04E1AC3F212149BA006F89A9 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1AC3E212149BA006F89A9 /* Concentration.swift */; };
 		04E1AC4121214ADF006F89A9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1AC4021214ADF006F89A9 /* Card.swift */; };
+		50D70ADF21E12098003924E8 /* EmojisDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D70ADE21E12098003924E8 /* EmojisDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04E1AC372120029A006F89A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E1AC3E212149BA006F89A9 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		04E1AC4021214ADF006F89A9 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		50D70ADE21E12098003924E8 /* EmojisDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			children = (
 				04E1AC3E212149BA006F89A9 /* Concentration.swift */,
 				04E1AC4021214ADF006F89A9 /* Card.swift */,
+				50D70ADE21E12098003924E8 /* EmojisDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E1AC2E21200299006F89A9 /* ViewController.swift in Sources */,
+				50D70ADF21E12098003924E8 /* EmojisDataSource.swift in Sources */,
 				04E1AC2C21200299006F89A9 /* AppDelegate.swift in Sources */,
 				04E1AC3F212149BA006F89A9 /* Concentration.swift in Sources */,
 				04E1AC4121214ADF006F89A9 /* Card.swift in Sources */,

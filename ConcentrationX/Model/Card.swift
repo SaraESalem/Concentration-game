@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Card : Hashable {  //every button has its card object     //make card hashable //Card : Hashable bz it will be key of dict which is Dictionary<<#Key: Hashable#>, Any>
+struct Card : Hashable {
+    //every button has its card object
+    //make card hashable //Card : Hashable bz it will be key of dict which is Dictionary<<#Key: Hashable#>, Any>
     var hashValue: Int {return identifier}
     
     static func == (lhs: Card, rhs: Card) -> Bool {
@@ -25,7 +27,6 @@ struct Card : Hashable {  //every button has its card object     //make card has
     private static func getUniqueIdentifier () -> Int {
         identifierFactory+=1
         return identifierFactory
-        
     }
     
     init() { // bz we don't initialize it
