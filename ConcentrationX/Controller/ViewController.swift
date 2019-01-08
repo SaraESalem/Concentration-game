@@ -31,7 +31,6 @@ class ViewController: UIViewController {
                         self.flipCount = self.flipCount - 1
                     }
                 }
-                
             }
             //to put imojj on the button
             updateViewFromModel()
@@ -63,7 +62,7 @@ class ViewController: UIViewController {
     private var dataSource = EmojisDataSource()
     
     override func viewDidLoad() {
-        _cardBackColor = dataSource.backGroundColor
+        _cardBackColor = dataSource.cardBackColor
         for index in cardbuttons.indices{
             let button = cardbuttons[index]
             button.backgroundColor = _cardBackColor
@@ -76,6 +75,7 @@ class ViewController: UIViewController {
         
         emojiiDictionary = [:]
         flipCount = 0
+        dataSource.startGame()
         _cardBackColor = dataSource.cardBackColor
         self.view.backgroundColor = dataSource.backGroundColor
         game.startNewGame()
@@ -88,13 +88,12 @@ class ViewController: UIViewController {
     
     private func putEmojiOnCard(for card : Card) -> String {
         //        print(card)
-        guard emojiiDictionary[card] == nil,
-            dataSource.emojiChoises.count > 0 else {
-            return "??"
-        }
-        let randomStringIndex = dataSource.emojiChoises.index(dataSource.emojiChoises.startIndex, offsetBy: dataSource.emojiChoises.count.arc4random)
+        
+        if emojiiDictionary[card] == nil , dataSource.emojiChoises.count > 0{
+           
+        let randomStringIndex = dataSource.emojiChoises.index(dataSource.emojiChoises.startIndex, offsetBy:dataSource.emojiChoises.count.arc4random)
         emojiiDictionary[card] = String(dataSource.emojiChoises.remove(at: randomStringIndex)) //Removes and returns the element at the specified position.
-
+        }
         return emojiiDictionary[card] ?? "??"
     }
     
